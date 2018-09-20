@@ -133,7 +133,7 @@ namespace Leap.Unity {
       //Now we just have a few more spheres for the hands
       //PalmPos, WristPos, and mockThumbJointPos, which is derived and not taken from the frame obj
 
-      Vector3 palmPosition = _hand.PalmPosition.ToVector3();
+      Vector3 palmPosition = TrackedArm.instance.GetViveTrackerPosition();
       drawSphere(palmPosition, _palmRadius);
 
       Vector3 thumbBaseToPalm = _spherePositions[THUMB_BASE_INDEX] - _hand.PalmPosition.ToVector3();
